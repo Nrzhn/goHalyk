@@ -4,12 +4,13 @@ func main() {
 
 }
 
-func longestCommonPrefix(strs []string) string {
-	s := ""
-	for i := 0; i < len(strs); i++ {
-		if len(strs[i]) > len(s) {
-			s = strs[i]
+func twoSum(nums []int, target int) []int {
+	for i := 0; i < len(nums); i++ {
+		for j := 1; j <= len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				return []int{i, j}
+			}
 		}
 	}
-	return s
+	return []int{}
 }
